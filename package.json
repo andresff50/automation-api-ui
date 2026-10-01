@@ -1,0 +1,33 @@
+{
+  "name": "project-automation-beon-tech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "lint-staged": {
+    "*": "prettier --write --ignore-unknown"
+  },
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "cypress run",
+    "prepare": "husky",
+    "cy:run": "cypress run --browser chrome",
+    "cy:open": "cypress open",
+    "cy:api": "cypress run --spec cypress/e2e/api/**/*.cy.ts",
+    "typecheck": "tsc",
+    "cy:ui": "cypress run --spec cypress/e2e/ui/**/*.cy.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "cypress": "^16.1.0",
+    "cypress-real-events": "^1.15.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.5.1",
+    "prettier": "3.9.9",
+    "typescript": "^7.0.2"
+  }
+}
